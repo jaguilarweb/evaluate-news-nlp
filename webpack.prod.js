@@ -5,6 +5,9 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
+    devServer: {
+        port:5000
+    },
     module: {
         rules: [
             {
