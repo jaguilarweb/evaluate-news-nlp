@@ -2,6 +2,13 @@ var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 
+// API Credentials
+/* // You could call it MeaningCloudApi, or anything else
+var textapi = new meanCloud({
+    application_key: "your-key"
+  })
+ */
+
 const app = express()
 
 app.use(express.static('dist'))
