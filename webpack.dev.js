@@ -7,9 +7,13 @@ module.exports = {
     entry: './src/client/index.js',
     mode: 'development',
     devtool: 'source-map',
-    devServer: {
-        port:8080
-    },
+    devServer:{
+        compress: true,
+        watchOptions:{
+          poll: true
+        },
+        port: 3006,
+      },    
     stats: 'verbose',
     module: {
         rules: [
