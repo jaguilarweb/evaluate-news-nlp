@@ -1,7 +1,14 @@
+import './styles/resets.scss'
+import './styles/base.scss'
+import './styles/footer.scss'
+import './styles/form.scss'
+import './styles/header.scss'
+
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
 
 console.log(checkForName);
 
-alert("Hello you vvv ")
-console.log("CHANGE!");
+alert("Hello you ")
+console.log("CHANGE444!");
+document.getElementById('results').innerHTML = 'This a new result';
