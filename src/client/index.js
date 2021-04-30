@@ -9,6 +9,5 @@ import { handleSubmit } from './js/formHandler'
 
 console.log(checkForName);
 
-alert("Hello you ")
 console.log("CHANGE444!");
 document.getElementById('results').innerHTML = 'This a new result';

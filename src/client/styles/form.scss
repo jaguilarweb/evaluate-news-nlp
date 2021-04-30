@@ -1,12 +1,23 @@
-form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
+@import"_variables.scss";
+
+section {
+    form {
+        border: 5px solid $color-form;
+        background-color: $color-dark;
+        color: $font-secondary-color;
+        border-radius: 3px;
+        padding: 40px;
+        input {
+            border: 1px solid $color-form;
+            padding: 5px 20px;
+            width: 100%;
+            line-height: 16px;
+            margin: 10px 0;
+        }
+
+    }
 }
 
-input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
-}
+
+
+
