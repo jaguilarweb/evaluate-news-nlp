@@ -41,7 +41,6 @@ const server = app.listen(port, listening);
 function listening(){
     console.log("server running...");
     console.log(`running on localhost: ${port}`);
-    console.log(`API_KEY ${API_KEY}`)
 }
 // ROUTES
 
@@ -66,12 +65,11 @@ app.get('/', function (req, res) {
 app.post('/dataAnalyze', async(req, res) => {
  // const txt = req.body;
 
-  const txt = "This text is the most dificult";
+  const txt = "This text is the most dificult I do not like it";
   const lang = "en";
 
   const response = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&txt=${txt}&lang=${lang}`)
-  .then(response => response.text())
-  .then(response => console.log(response))
+  .then(response => response.json())
   .then(response => res.send(response))
   .catch(error => console.log('error', error));
 })
