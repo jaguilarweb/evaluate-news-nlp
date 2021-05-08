@@ -15,10 +15,11 @@ function handleSubmit(event) {
         headers: {
             'Content-Type': 'application/json',
         },
-        mode: "no-cors"       
+     
     })
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
+    .then(response => response.json())
+    .then(function(response) {
+        document.getElementById('results').innerHTML = JSON.stringify(response);
     })
 
 }
