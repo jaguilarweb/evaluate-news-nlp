@@ -16,7 +16,7 @@ module.exports = {
         watchOptions:{
           poll: true
         },
-        port: 3006,
+        port: 8081,
       },    
     stats: 'verbose',
     module: {
