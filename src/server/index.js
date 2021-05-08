@@ -63,9 +63,9 @@ app.get('/', function (req, res) {
 ----------------------------------*/
 
 app.post('/dataAnalyze', async(req, res) => {
- // const txt = req.body;
-
-  const txt = "This text is the most dificult I do not like it";
+  const txt = req.body["formText"];
+  console.log(req.body["formText"]);
+  //const txt = "This text is the most dificult I do not like it";
   const lang = "en";
 
   const response = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&txt=${txt}&lang=${lang}`)
