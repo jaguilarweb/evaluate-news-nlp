@@ -13,3 +13,10 @@ body {
     }
 }
 
+.result-api{
+    background-color: $color-dark;
+    color: $color-form;
+    border:  5px solid $color-form;
+    font-family: sans-serif;
+    line-height: normal;
+}

@@ -19,7 +19,12 @@ function handleSubmit(event) {
     })
     .then(response => response.json())
     .then(function(response) {
-        document.getElementById('results').innerHTML = JSON.stringify(response);
+
+        const resultContainer = document.getElementById('results');
+        resultContainer.className = "result-api";
+        const parrafo = document.createElement('pre');
+        resultContainer.appendChild(parrafo);
+        parrafo.innerHTML = JSON.stringify(response, null, 4);
     })
 
 }
