@@ -4,8 +4,8 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    console.log(`el formText ${formText}`)
-    //Client.checkForName(formText)
+    console.log(`el formText ${formText}`);
+    console.log(Client.checkUrl(formText));
 
     console.log("::: Form Submitted ok :::")
     fetch('http://localhost:8080/dataAnalyze', 
