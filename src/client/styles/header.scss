@@ -1,9 +1,18 @@
 @import"_variables.scss";
 
 header {
-    background-color: $color-dark;
+    background-color: $color-brand;
     color: $font-secondary-color;
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
+}
+
+.logo {
+    img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
 }

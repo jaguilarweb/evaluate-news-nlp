@@ -2,19 +2,23 @@
 
 section {
     form {
-        border: 5px solid $color-form;
-        background-color: $color-dark;
+        border: 5px solid $color-brand;
+        background-color: $color-grey;
         color: $font-secondary-color;
         border-radius: 3px;
         padding: 40px;
         input {
-            border: 1px solid $color-form;
+            border: 2px solid $color-brand;
             padding: 5px 20px;
             width: 100%;
             line-height: 16px;
             margin: 10px 0;
         }
-
+        .submitBtn {
+            background-color: $color-brand;
+            border-radius: 15px;
+            color: $font-secondary-color;
+        }
     }
 }
 

@@ -1,12 +1,23 @@
 @import"_variables.scss";
 
 body {
+    font-family: $font-general;
+    h1 {
+        color: $color-brand;
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    p {
+        line-height: 20px;
+    }
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     main {
         flex: 2;
         section {
+            color: $color-grey-dark;
             max-width: 800px;
             margin: 50px auto;
         }
@@ -15,8 +26,8 @@ body {
 
 .result-api{
     background-color: $color-dark;
-    color: $color-form;
-    border:  5px solid $color-form;
-    font-family: sans-serif;
+    color: #cecece;
+    border:  5px solid $color-brand;
+    font-family: $font-general;
     line-height: normal;
 }
