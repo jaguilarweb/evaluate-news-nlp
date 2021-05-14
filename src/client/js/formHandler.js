@@ -1,32 +1,33 @@
 
 function handleSubmit(event) {
     event.preventDefault()
-
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    console.log(`el formText ${formText}`);
-    console.log(Client.checkUrl(formText));
-
     console.log("::: Form Submitted ok :::")
-    fetch('http://localhost:8080/dataAnalyze', 
-    {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        credentials: 'same-origin',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({formText})
-    })
-    .then(response => response.json())
-    .then(function(response) {
+    const resultContainer = document.getElementById('results');
 
-        const resultContainer = document.getElementById('results');
-        resultContainer.className = "result-api";
-        const parrafo = document.createElement('pre');
-        resultContainer.appendChild(parrafo);
-        parrafo.innerHTML = JSON.stringify(response, null, 4);
-    })
+    if (Client.checkUrl(formText)){
+        fetch('http://localhost:8080/dataAnalyze', 
+        {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({formText})
+        })
+        .then(response => response.json())
+        .then(function(response) {
+            resultContainer.className = "result-api";
+            const parrafo = document.createElement('pre');
+            resultContainer.appendChild(parrafo);
+            parrafo.innerHTML = JSON.stringify(response, null, 4);
+        })
+        .catch(error => console.log(`Error: ${error}`));
 
+    } else {
+        alert('Please, include an url in your text');
+    }
 }
 
 

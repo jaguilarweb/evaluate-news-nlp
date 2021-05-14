@@ -62,13 +62,13 @@ app.get('/', function (req, res) {
   POST Route
 ----------------------------------*/
 
-app.post('/dataAnalyze', async(req, res) => {
+app.post('/dataAnalyze', (req, res) => {
   const txt = req.body["formText"];
   console.log(req.body["formText"]);
   //const txt = "This text is the most dificult I do not like it";
   const lang = "en";
 
-  const response = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&txt=${txt}&lang=${lang}`)
+  const response = fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&txt=${txt}&lang=${lang}`)
   .then(response => response.json())
   .then(response => res.send(response))
   .catch(error => console.log('error', error));
