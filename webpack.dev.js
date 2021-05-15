@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
-
 module.exports = {
     entry: './src/client/index.js',
     mode: 'development',
@@ -17,7 +16,7 @@ module.exports = {
           poll: true
         },
         port: 8081,
-      },    
+      },
     stats: 'verbose',
     module: {
         rules: [
@@ -37,6 +36,5 @@ module.exports = {
             template: "./src/client/views/index.html",
             filename: "./index.html",
         }),
-
     ]
 }
