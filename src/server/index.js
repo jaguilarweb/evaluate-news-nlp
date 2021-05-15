@@ -41,7 +41,7 @@ function listening(){
   GET Route
 ----------------------------------*/
 app.get('/', function (req, res) {
-    res.sendFile(path.resolve("dist/index.html"))
+    res.sendFile("dist/index.html")
 })
 
 /*---------------------------------

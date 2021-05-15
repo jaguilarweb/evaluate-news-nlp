@@ -8,7 +8,8 @@ module.exports = {
     devtool: 'source-map',
     output:{
         libraryTarget: 'var',
-        library: 'Client'
+        library: 'Client',
+        publicPath: "/"
     },
     devServer:{
         compress: true,

@@ -1,15 +1,16 @@
 {
-  "name": "example-project",
+  "name": "evaluate-news-nlp",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "start": "node src/server/index.js",
+    "build": "webpack --mode production --config webpack.prod.js",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server --config webpack.dev.js --open"
   },
   "keywords": [],
-  "author": "",
+  "author": "jaguilarweb",
   "license": "ISC",
   "description": "",
   "dependencies": {
