@@ -26,14 +26,11 @@ app.use(cors());
 app.use(express.static('dist'))
 
 // Setup Server
-const port = 8080;
-const server = app.listen(port, listening);
-
-//Callback to debug
-function listening(){
-    console.log("server running...");
-    console.log(`running on localhost: ${port}`);
-}
+const port = process.env.PORT || 8081;
+app.listen((port), () => {
+  console.log("server running...");
+  console.log(`running on localhost:${port}`);
+});
 
 // ROUTES
 
