@@ -45,10 +45,10 @@ app.get('/', function (req, res) {
   POST Route
 ----------------------------------*/
 app.post('/dataAnalyze', (req, res) => {
-  const txt = req.body["formText"];
+  const urltxt = req.body["formText"];
   const lang = "en";
 
-  const response = fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&txt=${txt}&lang=${lang}`)
+  const response = fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&url=${urltxt}&lang=${lang}`)
   .then(response => response.json())
   .then(response => res.send(response))
   .catch(error => console.log('Error: ', error));

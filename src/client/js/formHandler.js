@@ -32,7 +32,7 @@ function handleSubmit(event) {
         .catch(error => console.log(`Error: ${error}`));
 
     } else {
-        alert('Please, include an url in your text');
+        alert('Please, include a valid url.');
     }
 }
 
