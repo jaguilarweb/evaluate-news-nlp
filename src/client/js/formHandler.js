@@ -6,7 +6,7 @@ function handleSubmit(event) {
     const resultContainer = document.getElementById('results');
 
     if (Client.checkUrl(formText)){
-        fetch('/dataAnalyze',
+        fetch('http://localhost:8080/dataAnalyze',
         {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             credentials: 'same-origin',

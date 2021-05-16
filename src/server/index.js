@@ -26,7 +26,7 @@ app.use(cors());
 app.use(express.static('dist'))
 
 // Setup Server
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8080;
 app.listen((port), () => {
   console.log("server running...");
   console.log(`running on localhost:${port}`);
