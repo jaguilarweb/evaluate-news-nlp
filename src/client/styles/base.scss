@@ -7,6 +7,10 @@ body {
         font-size: 25px;
         margin-bottom: 5px;
     }
+    h2 {
+        color: $color-brand;
+        font-weight: bold;
+    }
     p {
         line-height: 20px;
     }
@@ -22,6 +26,17 @@ body {
         }
     }
 }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    span {
+        color: $color-grey-dark;
+        font-weight: bold;
+    }
+  }
 
 .result-api{
     background-color: $color-dark;

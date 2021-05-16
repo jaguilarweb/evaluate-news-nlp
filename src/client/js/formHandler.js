@@ -17,6 +17,13 @@ function handleSubmit(event) {
         })
         .then(response => response.json())
         .then(function(response) {
+            const card = document.getElementById('card');
+            card.innerHTML =    `
+                                <p>Score tag:  <span>${response.score_tag}</span></p>
+                                <p>Agreement:  <span>${response.agreement}</span></p>
+                                <p>Subjectivity:  <span>${response.subjectivity}</span></p>
+                                <p>Confidence:  <span>${response.confidence}</span></p>
+                                `;
             resultContainer.className = "result-api";
             const paragraph = document.createElement('pre');
             resultContainer.appendChild(paragraph);
